@@ -1,6 +1,6 @@
 'use strict';
 
-const input = document.querySelectorAll('.field-text');
+const input = document.querySelectorAll('form div.field input.field-text');
 
 input.forEach((el) => {
   const label = document.createElement('label');
@@ -9,6 +9,7 @@ input.forEach((el) => {
   label.textContent = el.name;
   label.htmlFor = el.id;
   el.placeholder = el.name.replace(/\b\w/g, (l) => l.toUpperCase());
+  
 
   el.parentElement.insertBefore(label, el);
 });
