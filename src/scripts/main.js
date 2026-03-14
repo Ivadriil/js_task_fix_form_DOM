@@ -9,7 +9,6 @@ input.forEach((el) => {
   label.textContent = el.name;
   label.htmlFor = el.id;
   el.placeholder = el.name.replace(/\b\w/g, (l) => l.toUpperCase());
-  
 
   el.parentElement.insertBefore(label, el);
 });
